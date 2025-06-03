@@ -953,18 +953,21 @@
             }
         });
         
-        // Smooth scrolling for navigation links
-        $('a[href*="#"]').on('click', function(e) {
-            e.preventDefault();
-            
-            $('html, body').animate(
-                {
-                    scrollTop: $($(this).attr('href')).offset().top - 70,
-                },
-                500,
-                'linear'
-            );
-        });
+        // Smooth scrolling for navigation links (excluding back-to-top)
+$('a[href*="#"]').not('.back-to-top').on('click', function(e) {
+    e.preventDefault();
+    
+    var target = $(this).attr('href');
+    if (target === '#') return; // Skip empty hash
+    
+    $('html, body').animate(
+        {
+            scrollTop: $(target).offset().top - 70,
+        },
+        500,
+        'linear'
+    );
+});
         
         // Back to top button
         $(window).scroll(function() {
