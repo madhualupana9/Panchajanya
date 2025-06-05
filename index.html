@@ -399,6 +399,24 @@
         font-size: 1.2rem;
         color: var(--dark-color);
     }
+
+    .plot-image-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.plot-image-container img {
+    max-height: 500px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.image-caption {
+    font-style: italic;
+    color: #666;
+}
 </style>
 
 </head>
@@ -647,17 +665,15 @@
             </div>
             
             <div class="row">
-                <div class="col-md-4" data-aos="fade-up">
+                <div class="col-md-6" data-aos="fade-up">
                     <div class="price-card">
-                        <h3>140 Sq. Yards</h3>
+                        <h3>166 Sq. Yards</h3>
                         <div class="price-amount">₹21,00,000</div>
                         <p>Perfect for compact eco-friendly homes</p>
                         <a href="#contact" class="btn btn-outline-primary">Enquire Now</a>
                     </div>
-                </div>
-                
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="price-card">
+                    
+                    <div class="price-card mt-4" data-aos="fade-up" data-aos-delay="200">
                         <h3>200 Sq. Yards</h3>
                         <div class="price-amount">₹30,00,000</div>
                         <p>Ideal for medium-sized family homes</p>
@@ -665,19 +681,18 @@
                     </div>
                 </div>
                 
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="price-card">
-                        <h3>300 Sq. Yards</h3>
-                        <div class="price-amount">₹45,00,000</div>
-                        <p>Spacious plots for luxury villas</p>
-                        <a href="#contact" class="btn btn-outline-primary">Enquire Now</a>
+                <div class="col-md-6" data-aos="fade-left">
+                    <div class="plot-image-container">
+                        <a href="https://raw.githubusercontent.com/madhualupana9/Panchajanya/refs/heads/main/design.jpg" target="_blank">
+                        <img src="https://raw.githubusercontent.com/madhualupana9/Panchajanya/refs/heads/main/design.jpg" alt="Plot Layout Design" class="img-fluid rounded shadow"></a>
+                        <div class="image-caption text-center mt-3">Our Premium Plot Layout</div>
                     </div>
                 </div>
             </div>
             
             <div class="text-center mt-5" data-aos="fade-up">
                 <p class="text-muted">Note: Prices are subject to change. Please contact us for the latest updates.</p>
-                <a href="#contact" class="btn btn-primary mt-3">Get Full Price List</a>
+                <a href="#contact" class="btn btn-primary mt-3">Contact For Full Price List</a>
             </div>
         </div>
     </section>
